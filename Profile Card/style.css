@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 18px "Inter", sans-serif;
+  color: black;
+  min-height: 100;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(45deg, #184d47, #a5f0c5) no-repeat center;
+  background-size: cover;
+}
+
+.profile-card {
+  width: 650px;
+  display: flex;
+  position: relative;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(128, 245, 157, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  flex-direction: column;
+  gap: 40px;
+  padding: 3rem 5rem;
+}
+
+@media screen and (max-width: 700px) {
+  .profile-card {
+    width: auto;
+  }
+}
+
+.profile-card__logo img {
+  width: 50%;
+  margin: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  box-shadow: 0 10px 60px -10px;
+  display: block;
+  border-radius: 50%;
+}
+
+.profile-card__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.profile-card__header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.profile-card__header h1+div {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-card__info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .profile-card__info {
+    gap: 30px;
+  }
+  
+}
+
+.profile-card__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+@media screen and (max-width: 768px) {
+  .profile-card__socials {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+}
+
+a {
+  display: inline-flex;
+  width: 55px;
+  height: 55px;
+  margin: 15px;
+  border-radius: 40%;
+  align-items: center;
+  color: white;
+  position: relative;
+  flex-shrink: 0;
+}
+
+
+@media screen and (max-width: 769px) {
+  a {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+
+}
+
+.twitter {
+  background: linear-gradient(45deg, #1DA1F2, #657786);
+  box-shadow: 0 4px 30px rgba(19, 127, 212, 0.7);
+  justify-content: center;
+}
+
+.github {
+  background: linear-gradient(45deg, #333333, #626b78);
+  box-shadow: 0 4px 30px rgba(63, 65, 67, 0.6);
+  justify-content: center;
+}
+
+.discord {
+  background: linear-gradient(45deg, #7289da, #869ae2);
+  box-shadow: 0 4px 30px rgba(134, 154, 226, 0.7);
+  justify-content: center;
+}
+
+.profile-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .profile-card__actions {
+    flex-direction: column;
+    gap: 1.5rem
+  }
+}
+
+button {
+  flex-direction: column;
+  font-size: 22px;
+  padding: 15px 0;
+  min-width: 250px;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+@media  screen and (max-width: 768px) {
+  button {
+    min-width: 170px;
+  }
+  
+}
+
+@media screen and (max-width: 576px) {
+  button {
+    min-width: inherit;
+    width: 100px;
+    max-width: 350px;
+  }
+  
+}
+
+.jade {
+  background: linear-gradient(45deg, #01A66F, #10855e);
+  box-shadow: 0 4px 30px rgba(30, 164, 99, 0.7);
+  border: none;
+  align-items: center;
+}
+
+.jade:hover{
+  box-shadow: 0 7px 30px rgba(52, 92, 71, 0.75);
+}
+
+.aquamarine {
+  background: linear-gradient(45deg, #75ce9f, #5DA47F );
+  box-shadow: 0 4px 30px rgba(105, 185, 143, 0.7);
+  border: none;
+  align-items: center;
+}
+
+.aquamarine:hover{
+  box-shadow: 0 7px 30px rgba(39, 190, 112, 0.75);
+}
